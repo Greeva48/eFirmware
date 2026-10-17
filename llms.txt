@@ -1,0 +1,23 @@
+# eFirmware
+
+> llms.txt for the eFirmware repository (embeddedos-org/eFirmware).
+> Status: firmware collection for EmbeddedOS targets — board
+> profiles, bring-up notes and silicon errata records.
+
+eFirmware holds the org's board-level firmware knowledge:
+per-board profiles in a fixed eight-section format (geometry
+vendor-sourced or marked as a stub — never invented), ESP-IDF
+bring-up guidance, and errata that affect EoS ports.
+
+## Docs
+
+- [Board profiles](docs/board-profiles/README.md)
+- [NuMaker-GestureAI-M55M1 firmware profile](docs/board-profiles/numaker-gestureai-m55m1.md)
+- [ESP-IDF v6.1 bring-up baseline](docs/esp-idf-v6.1-bringup.md)
+- [ESP32-P4 LP-SPI errata advisory (bring-up note)](docs/esp32-p4-lp-spi-errata.md)
+- [NPU-interconnect direction (Track 1)](docs/npu-interconnect-direction.md)
+
+## Machine-readable
+
+- [llms.txt](llms.txt) — this file
+- [llms-full.txt](llms-full.txt) — the docs above concatenated as one document
