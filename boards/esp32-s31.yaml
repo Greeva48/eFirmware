@@ -1,0 +1,50 @@
+# Machine-readable board geometry: Espressif ESP32-S31
+#
+# Mirrors docs/board-profiles/esp32-s31.md. Only Espressif-published
+# values are populated. Flash geometry is NOT published in
+# Espressif's announcement material, so the flash section is an
+# explicit stub — no regions, no sizes — per the sourcing rule in
+# docs/board-profiles/README.md. Do not fill it from third-party
+# listings; it is written from the datasheet when it lands.
+
+board: esp32-s31
+vendor: Espressif
+mcu: ESP32-S31
+
+cpu:
+  core: RISC-V (dual-core)
+  freq_mhz: 320
+  features: [128-bit SIMD on one core]
+  lp_core:
+    freq_mhz: 40
+
+memory:
+  sram_bytes: 524288         # 512 KB
+  lp_sram_bytes: 32768       # 32 KB
+  flash_bytes: null          # NOT published — stub, see profile
+
+flash:
+  geometry: null             # NOT published — stub, see profile
+  regions: []                # written from the datasheet, not guessed
+
+radios:
+  wifi: Wi-Fi 6
+  bluetooth: 5.4 (Classic + LE)
+  ieee_802_15_4: Thread/Zigbee (Matter-capable)
+
+wired:
+  ethernet: Gigabit MAC
+
+io:
+  gpio_max: 60
+  package: QFN80
+
+kits: [Function-CoreBoard-1, Korvo-1]
+
+toolchain:
+  esp_idf: v6.1 (preview target, CONFIG_IDF_TARGET_ESP32S31)
+  errata:
+    - "ESP-IDF v6.1.0 dual-core cache fault (Espressif #18948, MCAUSE 0x19): disable branch prediction on the parked core — see docs/esp-idf-v6.1-bringup.md"
+
+security:
+  partitioning: null         # NOT published — stub, see profile

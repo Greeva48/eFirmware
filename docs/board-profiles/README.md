@@ -9,6 +9,7 @@ fits the `efw_image` A/B slot scheme to its real memory geometry.
 | Board | Chip | Status |
 |---|---|---|
 | [NuMaker-GestureAI-M55M1](numaker-gestureai-m55m1.md) | Nuvoton NuMicro M55M1 (Cortex-M55 + Ethos-U55) | Bring-up profile, 2026-10-11 |
+| [ESP32-S31](esp32-s31.md) | Espressif ESP32-S31 (dual-core RISC-V) | Partial bring-up profile, 2026-10-19 — chip facts sourced; flash geometry stubbed (unpublished) |
 
 ## The format
 
